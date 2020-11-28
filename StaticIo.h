@@ -12,15 +12,16 @@ class StaticIo
 {
 
 public:
-	StaticIo(): _port(-1) {}
+	StaticIo(): _port(-1), _usePositiveLogic(true), _isOn(false) {}
 
-	void Init(int port);
+	void Init(int port, bool usePositiveLogic=true);
 	void On();
 	void Off();
 
 private:
 	int _port;
 	bool _isOn;
+	bool _usePositiveLogic;
 };
 
 #endif

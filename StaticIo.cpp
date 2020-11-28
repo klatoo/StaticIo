@@ -4,7 +4,7 @@
 
 #include "StaticIo.h"
 
-void StaticIo::Init(int port)
+void StaticIo::Init(int port, bool usePositiveLogic)
 {
   _port = port;
   pinMode(_port,OUTPUT);
@@ -13,13 +13,28 @@ void StaticIo::Init(int port)
 
 void StaticIo::On()
 {
-  digitalWrite(_port,LOW);
+  if(_usePositiveLogic)
+  {
+    digitalWrite(_port,LOW);
+  }
+  elses
+  {
+    digitalWrite(_port,HIGH);
+  }
   _isOn = true;
 }
 
 void StaticIo::Off()
 {
-  digitalWrite(_port,HIGH);
+  if(_usePositiveLogic)
+  {
+     digitalWrite(_port,HIGH);
+  } 
+  else
+  {
+    digitalWrite(_port,LOW);
+  }
+  
   _isOn = false;
 }
 
