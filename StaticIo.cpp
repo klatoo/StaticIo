@@ -1,12 +1,14 @@
 // StaticIo.cpp
 // 
-// last edit 28.Nov.2020 /klatoo  - created
+// last edit 28.Nov.2020 /klatoo - created
+//           29.Nov.2020 /klatoo - fixed missiing assignment
 
 #include <StaticIo.h>
 
 void StaticIo::Init(int port, bool usePositiveLogic)
 {
   _port = port;
+  _usePositiveLogic = usePositiveLogic;
   pinMode(_port,OUTPUT);
   Off();
 }
