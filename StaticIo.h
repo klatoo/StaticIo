@@ -13,10 +13,12 @@ class StaticIo
 
 public:
 	StaticIo(): _port(-1), _usePositiveLogic(true), _isOn(false) {}
+	
 	StaticIo(int port, bool usePositiveLogic=true)
 	{
 		Init(port, usePositiveLogic);
 	}
+	
 
 	void Init(int port, bool usePositiveLogic=true);
 	void On();

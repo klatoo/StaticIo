@@ -2,7 +2,7 @@
 // 
 // last edit 28.Nov.2020 /klatoo  - created
 
-#include "StaticIo.h"
+#include <StaticIo.h>
 
 void StaticIo::Init(int port, bool usePositiveLogic)
 {
