@@ -17,7 +17,7 @@ void StaticIo::On()
   {
     digitalWrite(_port,LOW);
   }
-  elses
+  else
   {
     digitalWrite(_port,HIGH);
   }
